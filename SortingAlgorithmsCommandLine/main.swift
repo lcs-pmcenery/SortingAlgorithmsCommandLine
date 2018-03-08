@@ -50,9 +50,13 @@ print("Now sorting the array...")
 
 // Loop through the array and find the highest, moving it to the end
 for _ in 0...numbers.count - 2 {
+    //2 loops: one to repeat the process of moving each index value
     for i in 0...numbers.count - 2 {
+        //numbers.count implemented to allow universal compatibility (array of any length)
         if numbers[i] > numbers[i+1] {
+            //if the number is greater than the one we are comparing it to (+1 up the array) then they will switch postions.
             let temporaryValue = numbers[i]
+            //while switching one number must leave the array and enter in the other number's position
             numbers[i] = numbers[i+1]
             numbers[i+1] = temporaryValue
         }
