@@ -49,8 +49,8 @@ print("-----")
 print("Now sorting the array...")
 
 // Loop through the array and find the highest, moving it to the end
-for i in 0...4 {
-    for i in 0...4 {
+for _ in 0...numbers.count - 2 {
+    for i in 0...numbers.count - 2 {
         if numbers[i] > numbers[i+1] {
             let temporaryValue = numbers[i]
             numbers[i] = numbers[i+1]
